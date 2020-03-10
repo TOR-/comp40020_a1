@@ -99,9 +99,11 @@ Lexical diversity, as defined in \cref{lst:lex div}, is the ratio of the number 
 
 I aimed to use it as a means of distinguishing songs from the different artists on the premise that one artist's work would be more lexically diverse than the other. This premise seems to have proved true: although I haven't assessed the degree of the distinction, the lexical diversity of King Crimson's work|when taken over their whole corpus|is 68.53\% greater than that of Johnny Cash's (see \cref{lst:lex div overall}).
 
-A similar relationship exists when lexical diversity is evaluated over each song. Two measures of central tendency, the arithmetic mean and the median, show a significantly greater average lexical diversity for King Crimson's work.
+A similar relationship exists when lexical diversity is evaluated over each song (\cref{lst:songs lex div}). Two measures of central tendency, the arithmetic mean and the median, show a significantly greater average lexical diversity for King Crimson's work.
 
 If the lexical diversity of the songs is normally distributed, then due to the lower mean and smaller standard deviation, the work of Johnny Cash is once more less lexically diverse than that of King Crimson; these normal distributions could be used to predict the likelihood of a given song belonging to one or another artist.
+
+One factor that reduces the predictive power of lexical diversity is that I didn't filter the songs to exclude those that were instrumental|these had a lexical diversity of one as the site denoted their lyrics as the string \texttt{[Instrumental]}|and therefore boost both mean and median values. Only King Crimson have instrumental songs, and of these approximately twelve.
 
 \begin{listing}[h]
 \begin{minted}{python}
@@ -147,7 +149,7 @@ for a,llex in zip(aa,lexdiv_stem):
 	$\bar{x}$&0.7250&0.6580\\
 	$\sigma_x$&0.2116&0.1428\\
 	$median\{x\}$&0.7554&0.6724\\
-	$min\{x\}$&0.2400&0.2000\\
+%	$min\{x\}$&0.2400&0.2000\\
 	\bottomrule
 \end{tabular}
 \caption{Statistical lexical diversity over individual songs using the \texttt{statistics} library~(top); output statistics (bottom).}

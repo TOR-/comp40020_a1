@@ -1,1 +1,20 @@
 \section{Application}
+
+\begin{strip}
+My academic background is that of electronic engineering.
+
+Digital hearing aids can allow the user to program the sounds they hear \cite{dhasa}. The basis for their operation is that they can, thanks to digital signal processing, selectively amplify various frequencies. By extension, they can react to combinations of these frequencies that form words.
+
+\subsection{Proposal}
+I propose that an application of the analyses performed in this assignment is the automatic filtering of advertising audio at the input channel. This could be performed in such a manner that the user could still hear useful signals such as conversations relatively well, while the noise of the advertisement is significantly attenuated.
+
+This could be done by a combination of the above analyses, for example:
+\subsubsection{Bigrams}
+After analysing the input words for some time, if there is a high count of bigrams that correspond to advertising content such as \texttt{('low','prices')} or \texttt{('amazing','deals')} perhaps, that audio source will be flagged for attenuation.
+\subsubsection{Frequency distribution}
+Advertising may have a characteristic frequency distribution of words. If such a frequency distribution can be identified, perhaps learned with some form of machine learning algorithm, then word sources such as a tv playing an ad can be identified|by the same learned model|and filtered out.
+
+\subsection{Necessary Additions to Previous Analyses}
+For a constrained-time application such as live ad-blocking, the approaches studied above are less than ideal. This is due to their needing a large input sample to filter a noise source with any degree of confidence. Better approaches would involve perhaps a machine-learning model that makes quicker predictions based on less data; such a model would have to be extensively trained on a wide variety of training data in order that the hearing aid continue operating normally for most non-intrusive signals.
+
+\end{strip}
