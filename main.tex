@@ -1,0 +1,52 @@
+% !TeX document-id = {25666a0c-8980-43eb-b3b3-0f1b933e541e}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[article,minted,twocolumn]{TOREngReport}
+
+\usepackage{comment}
+
+\begin{document}
+% Define report details
+\TOREngReportDetails{Assignment One\\{\Large\hspace{1cm} Applications of text analysis}}{COMP40020 Human Language Technologies}{UCD}{Tiarnach \'O Riada 16315466}
+\AbstractBox{
+	This report will:
+	\begin{itemize}
+		\item With songs from two different artists (King Crimson and Johnny Cash) use the tools introduced in the module to identify similarities and differences in the style of language used.
+		\item Identify defining features of the above artists and assess their utility in guessing an unseen song.
+		\item Discuss a context where this analytical approach could apply to another task related to the author's own academic background, electronic engineering.
+		\item Discuss necessary additions or alterations to the approach to better perform the above-mentioned task.
+	\end{itemize}
+}
+\maketitle
+
+\pagenumbering{roman}
+\pagestyle{preface}
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+\pagestyle{body}
+
+\include{src/artists}
+
+% GATHER DATA
+%	RELATE STEPS TO MATERIAL IN LECTURES AND LABS
+%		ANALYSE EFFECTS OF DECISIONS IN METHODOLOGY ON RESULTS
+%	PREVIOUSLY TRIED STUFF FROM MODULE BUT RAN INTO REQUEST LIMITS
+
+% ANALYSE RESULTS
+%	INTERPRET RESULTS
+%	ANALYSE EFFECTS OF DECISIONS IN METHODOLOGY ON RESULTS
+
+\include{src/applications}
+% APPLICATION OF ASPECTS TO ACADEMIC BACKGROUND OR AREA OF INTEREST
+% Present unique insights and innovative ideas regarding the approach and how it can be modified and improved for application to another context.
+% Display evidence of having carried out research beyond the course materials
+
+% APPENDICES
+\begin{appendix}
+\end{appendix}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
